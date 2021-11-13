@@ -38,6 +38,10 @@ systemctl disable dhcpcd.service
 systemctl stop dhcpcd.service
 systemctl enable NetworkManager.service
 systemctl enable bluetooth
+
+echo -e "\nEnabling havegard services"
+sudo systemctl start haveged
+sudo systemctl enable haveged
 echo "
 ###############################################################################
 # Cleaning
